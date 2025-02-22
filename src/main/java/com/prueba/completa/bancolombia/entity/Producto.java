@@ -1,9 +1,8 @@
 package com.prueba.completa.bancolombia.entity;
  
 import jakarta.persistence.*;
-import lombok.Data;
+
 @Entity
-@Data
 @Table(name="PRODUCTO")
  public class Producto {
 
@@ -20,5 +19,56 @@ import lombok.Data;
     private Integer discount;
     @Column(name="AVAILABLE")
     private Integer available;
+
+
+    // Getters
+    public String getBarcode() {
+      return barcode;
+  }
+
+  public String getItem() {
+      return item;
+  }
+
+  public String getCategory() {
+      return category;
+  }
+
+  public Integer getPrice() {
+      return price;
+  }
+
+  public Integer getDiscount() {
+      return discount;
+  }
+
+  public Integer getAvailable() {
+      return available;
+  }
+
+  // Setters
+  public void setBarcode(String barcode) {
+      this.barcode = barcode;
+  }
+
+  public void setItem(String item) {
+      this.item = item;
+  }
+
+  public void setCategory(String category) {
+      this.category = category;
+  }
+
+  public void setPrice(Integer price) {
+      this.price = price;
+  }
+
+  public void setDiscount(Integer discount) {
+      this.discount = discount;
+  }
+
+  public void setAvailable(Integer available) {
+      this.available = available;
+  }
 
  }
